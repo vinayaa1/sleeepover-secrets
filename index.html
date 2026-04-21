@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sleepover Secrets</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sleepover Secrets</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="app">
 
-<h1>sleepover secrets...</h1>
+    <div id="title-screen">
+      <div class="candles">
+        <span class="candle flicker">🕯</span>
+        <span class="candle flicker delay1">🕯</span>
+        <span class="candle flicker delay2">🕯</span>
+      </div>
+      <h1>Sleepover<br>Secrets</h1>
+      <div class="sub">◆ a mystery ◆</div>
+      <p>Six friends. One locked house. Someone is hiding something — and the truth only comes out after midnight.</p>
+      <button class="btn-main" id="start-btn">Begin the Night</button>
+    </div>
 
-<div id="text"></div>
-<div id="buttons"></div>
+    <div id="game-screen" class="hidden">
+      <div id="scene-title"></div>
+      <div id="narrator"></div>
+      <div id="status-bar">
+        <div class="stat">Trust <span id="trust-val">5</span>/10</div>
+        <div class="stat">Suspicion <span id="suspicion-val">0</span>/10</div>
+        <div class="stat">Time <span id="time-val">9:00 PM</span></div>
+      </div>
+      <div id="inventory"></div>
+      <div id="story-box">
+        <div id="speaker"></div>
+        <div id="story-text"></div>
+      </div>
+      <div id="clue-box" class="hidden">
+        <strong>🔍 Clue Discovered</strong>
+        <span id="clue-text"></span>
+      </div>
+      <div id="choices"></div>
+    </div>
 
-<!-- IMPORTANT: DO NOT CHANGE THIS -->
-<script src="./game.js"></script>
+    <div id="end-screen" class="hidden">
+      <div class="candle flicker big-candle">🕯</div>
+      <h2 id="end-title"></h2>
+      <p id="end-body"></p>
+      <button class="btn-main" id="replay-btn">Play Again</button>
+    </div>
 
+  </div>
+  <script src="game.js"></script>
 </body>
 </html>
